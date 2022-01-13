@@ -26,9 +26,28 @@ const win = () => {
         if ((textBox[e[0]].innerText === textBox[e[1]].innerText) && (textBox[e[2]].innerText === textBox[e[1]].innerText) && (textBox[e[0]].innerText !== "")) {
             document.querySelector(".infoTurn").innerText = textBox[e[0]].innerText + " Won!"
             game = true;
-            document.querySelector(".infoTurn").innerText = textBox[e[0]].innerText + " Won!"
             document.querySelector(".content").style.display = `none`;
+        }
+    })
+}
 
+// function to check for a draw
+const draw = () => {
+    let textBox = document.getElementsByClassName("text");
+    let drawPossibility = [
+        [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    ]
+
+    drawPossibility.forEach(f => {
+        // if ((textBox[f[0]].innerText !== "") && (textBox[f[1]].innerText !== "") && (textBox[f[2]].innerText !== "") && (textBox[f[3]].innerText !== "") && (textBox[f[4]].innerText !== "") && (textBox[f[5]].innerText !== "") && (textBox[f[6]].innerText !== "") && (textBox[f[7]].innerText !== "") && (textBox[f[8]].innerText !== "") && (textBox[f[9]].innerText !== "")) {
+        //     document.querySelector(".infoTurn") = "Draw!"
+        //     document.querySelector(".content").style.display = `none`;
+        //     game = true;
+        // }
+        if ((textBox[f[0]].innerText === "X" || textBox[f[0]].innerText === "O") && (textBox[f[1]].innerText === "X" || textBox[f[1]].innerText === "O") && (textBox[f[2]].innerText === "X" || textBox[f[2]].innerText === "O") && (textBox[f[3]].innerText === "X" || textBox[f[3]].innerText === "O") && (textBox[f[4]].innerText === "X" || textBox[f[4]].innerText === "O") && (textBox[f[5]].innerText === "X" || textBox[f[5]].innerText === "O") && (textBox[f[6]].innerText === "X" || textBox[f[6]].innerText === "O") && (textBox[f[7]].innerText === "X" || textBox[f[7]].innerText === "O") && (textBox[f[8]].innerText === "X" || textBox[f[8]].innerText === "O") && (textBox[f[0]].innerText === "X" || textBox[f[0]].innerText === "O")) {
+            document.querySelector(".infoTurn").innerText = "Draw!"
+            document.querySelector(".content").style.display = `none`;
+            game = true;
         }
     })
 }
@@ -42,6 +61,7 @@ Array.from(box).forEach(element => {
             boxText.innerText = turn;
             turn = oppTurn();
             win();
+            draw()
             if (!game) {
                 document.getElementsByClassName("infoTurn")[0].innerText = "Turn for " + turn;
             }
