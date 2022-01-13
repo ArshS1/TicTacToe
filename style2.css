@@ -16,11 +16,13 @@ h1 {
     display: flex;
     justify-content: center;
     font-weight: bold;
+    text-align: center;    
 }
 
 .share {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .source {
@@ -46,4 +48,5 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }

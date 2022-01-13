@@ -26,8 +26,8 @@ const win = () => {
         if ((textBox[e[0]].innerText === textBox[e[1]].innerText) && (textBox[e[2]].innerText === textBox[e[1]].innerText) && (textBox[e[0]].innerText !== "")) {
             document.querySelector(".infoTurn").innerText = textBox[e[0]].innerText + " Won!"
             game = true;
-            document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
-            document.querySelector(".line").style.width = "20vw";
+            document.querySelector(".infoTurn").innerText = textBox[e[0]].innerText + " Won!"
+            document.querySelector(".content").style.display = `none`;
 
         }
     })
@@ -58,5 +58,5 @@ button.addEventListener('click', () => {
     turn = "X";
     game = false;
     document.getElementsByClassName("infoTurn")[0].innerText = "Turn for " + turn;
-    document.querySelector(".line").style.width = "0vw";
+    document.querySelector(".content").style.display = "grid";    
 })
