@@ -1,0 +1,49 @@
+* {
+    background-color: black;
+    color:  white;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-top: 50px;
+    font-size: 4rem;
+}
+
+.info {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.share {
+    display: flex;
+    justify-content: center;
+}
+
+.source {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 4%;
+    cursor: pointer;
+}
+
+.source:hover {
+    border: 2px solid white;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+}
+
+.personal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
